@@ -1,0 +1,5 @@
+<div style="min-height: 100px; min-width: 100%; text-align: center" class="btn-info">
+    <p style="text-align: center; padding-top: 40px; color: white;">{{compPerc}}</p>
+</div>
+<app-gear (response)="response($event)" (perc)="perc($event)" [accurayPercentages]="0.995" [numLabels]="3" [scannedImg] = "url" [equipPDF] ="equipPDF"></app-gear>
+

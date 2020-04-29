@@ -1,0 +1,86 @@
+{
+    "Right-View":{
+        "data":[
+            {
+                "label":1,
+                "info": "Loose parts in the intake area must be fixed in a way they can never be sucked in. Loose parts or dirt can damage or destroy the turbine. We recommend the use of a protection screen."
+            },
+            {
+                "label":2,
+                "info": "Place model with the nose facing the wind. Wait until the cooling down process is completed. "
+            },
+            {
+                "label":3,
+                "info": "Be aware of the cooling process after engine shut down. During this process, the electric power supply of the receiver and the ECU must not be turned off. "
+            },
+            {
+                "label":4,
+                "info": "The cooling down process takes 1 – 2 minutes, depending on outside air temperatures."
+            },
+            {
+                "label":5,
+                "info": "All tube connections must be inspected for leakage. The fuel tanks must be emptied in case of extreme outside temperatures or when there is no early operation planned (danger of explosion!)."
+            },
+            {
+                "label":6,
+                "info": "The turbine must be installed in a way that it can be cooled by a bypassing air stream"
+            }
+        ]
+    },
+    "Left-View":{
+        "data":[
+            {
+                "label":1,
+                "info": "The intake area (impeller / compressor) must be kept clear. Any wires, tubes, etc. must be installed and fixed in a way they cannot be sucked into the turbine."
+            },
+            {
+                "label":2,
+                "info": "In general, there should not be any objects or installations close to the front end of the turbine."
+            },
+            {
+                "label":3,
+                "info": "The optimum size of the fuel tank depends on the model but should be at least 1.7 liters."
+            },
+            {
+                "label":4,
+                "info": "The optimum size for the B100F is 2 - 3 liters, which is enough for an average air time of 6 – 8 minutes, depending on your style of flying."
+            },
+            {
+                "label":5,
+                "info": "There must be a felt pendulum in the tank. Use only the included felt pendulum. The tank set up can be realized with a so called Hopper tank (please see installation scheme “engine fuel supply”."
+            },
+            {
+                "label":6,
+                "info": "The felt pendulum must only be installed in the Hopper tank; there must be free passage from the other tanks of 3 mm (minimum)."
+            }
+        ]
+    },
+    "Front-View":{
+        "data":[
+            {
+                "label":1,
+                "info": "Use yellow, highly flexible Tygon tube and attach it to the pump with a cable connector. Tank accessories, pendula, etc. can be found in the BF Turbines line up."
+            },
+            {
+                "label":2,
+                "info": "The fuel pump must be installed directly after the tank. Be careful to install the pump correctly (brass fitting = draw side)."
+            },
+            {
+                "label":3,
+                "info": "The electric wiring of the pump hast o be done with the correct polarity (+ / -). If the pump is not wired correctly, it will not work right and will transport no fuel"
+            },
+            {
+                "label":4,
+                "info": "The ECU features a CODE controlled menu system. Every number features an individual menu point. From these menu points you have options of changing different pre-set parameters."
+            },
+            {
+                "label":5,
+                "info": "All tube connections must be inspected for leakage. The fuel tanks must be emptied in case of extreme outside temperatures or when there is no early operation planned (danger of explosion!)."
+            },
+            {
+                "label":6,
+                "info": "The optimum size of the fuel tank depends on the model but should be at least 1.7 liters."
+            }
+        ]
+    }
+}

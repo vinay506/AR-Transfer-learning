@@ -1,0 +1,13 @@
+1. Is there a production URL for couchdb? If so, what is it? I only see localhost for production environment as well.
+The couchDB setup is installed in the same server as the Angular application. Hence, a localhost url would still connect the application to couchDB.
+
+However, in the current setup, the couchDB server also needs to be HTTPS for the application to connect - when launched on an iPad. For this reason, the last attempt at launching the application, I trained the model on desktop, stored it on couchDB (on desktop) - downloaded it manually and saved it in the 'assets folder' of the application (on the server via Filezilla).
+
+2. In the existing code, if I train a second obj, it is replacing / overwriting the first. Is this an expected behaviour or a known bug?
+That is expected behavior. Since the 'Training Module' was not a part of the scope in the initial estimates of this PoC, this was the approach taken. However, it should be quite straight-forward to download the model, and add newer images/labels. However, the max number of labels have to be set to 10,000 perhaps, to begin with.
+
+My understanding is that it should store the weights of both the classes in separate documents. Can you explain this?
+So, the ML5 JS framework we're using creates 2 files.. 1. the JSON file - which is a mere reference to the BIN file. 2. the BIN which accumulates ALL the weights for corresponding classes. So, yes, effectively, there's only the BIN file which stores all the weights for all different classes.
+
+3. Any known issues of the app that we should be aware of? For e.g., did the deployment succeed the other day using SSL?
+As mentioned earlier, it still needed manual intervention to download the model and place it in the 'assets folder' of the application (on the server). So the couchDB installation on the server needs an HTTPS for the application to run end-to-end, especially on the iPad.

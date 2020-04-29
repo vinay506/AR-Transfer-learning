@@ -1,0 +1,62 @@
+<main class="p-3" style="text-align: justify;">
+  <Section class="btn-warning">
+      <h3 class="text-center text-white">Training Module</h3>
+     
+<form name="dynamicForm" #dynamicForm="ngForm">
+  <div class="row formFields">
+      <div class="col-3" style="min-height: 109px;">
+          <div class="form-group pl-3">
+              <label  class="text-white">Id</label>
+              <input type="text" class="form-control" placeholder="Id" name="equipIdText" #equipIdText="ngModel" [(ngModel)]="equipId" required>
+              <small class="form-text text-danger" [hidden]="equipIdText.valid">Please enter the id.</small>
+            </div>
+      </div>
+      <div class="col-3" style="min-height: 109px;">
+          <div class="form-group">
+              <label class="text-white">Name</label>
+              <input type="text" class="form-control" placeholder="Name" name="equipNameText" #equipNameText="ngModel" [(ngModel)]="equipName" required>
+              <small class="form-text text-danger" [hidden]="equipNameText.valid">Please enter the name.</small>
+            </div>
+      </div>
+      <div class="col-3">
+          <div class="form-group pr-3">       
+            <label  class="text-white">Select Image:</label>      
+            <input type='file' (change)="onAdd($event)">            
+          </div>  
+      </div>
+      <div class="col-3">
+        <div class="form-group pr-3">         
+          <label  class="text-white">Select PDF:</label>          
+          <input type='file' (change)="onAddPdf($event)">            
+        </div>  
+    </div>
+  </div>
+</form>
+     
+  </Section>
+  <article style="text-align: center;">
+      <div class="row" style="display: block;">
+        <video #video id="video" width="{{frameWidth}}" height="{{frameHeight}}"   class="videoInsert" autoplay autofocus hidden  capture="environment"></video>          
+        <canvas #canvas id="canvas" width="{{frameWidth}}" height="{{frameHeight}}"  style="display: none;"></canvas>
+      </div>
+      <div class="row" style="display: block;">
+        <button type="button" class="btn btn-outline-success px-3 my-2 mr-2" [disabled]="dynamicForm.invalid" (click)="addImage()">Capture</button>
+        <!-- <button type="button" class="btn btn-outline-danger px-3 my-2 mr-2"  (click)="updateId()">NEXT</button> -->
+        <button type="button" class="btn btn-outline-primary px-3 my-2 mr-2" (click)="train()" [disabled]="captures.length < 1">Train</button>   
+        <button type="button" class="btn btn-outline-warning px-3 my-2 mr-2" (click)="saveModel()" [disabled]="isTrained">Save</button>            
+      </div>     
+
+      <div class="row" id="sketchy" style="display: block;">
+      </div>
+      <div class="row" id="sketchButton" style="display: block;">
+      </div>
+  </article>
+</main>
+
+<div class="panel-body">
+  <ul class="nav nav-pills">
+    <li *ngFor="let c of captures; index as i" class="list-group-item">
+      <img src="{{ c }}" width="{{frameWidth/3}}" height="{{frameHeight/3}}"   (click)="onCaptureClick(i)"/>
+    </li>    
+  </ul>
+</div>
